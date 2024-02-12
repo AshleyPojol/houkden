@@ -1,0 +1,78 @@
+CRITICAL - 2024-02-03 01:17:33 --> ErrorException: Undefined variable $username
+in APPPATH\Views\login\main.php on line 9.
+ 1 APPPATH\Views\login\main.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $username', 'C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php', 9)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Views/login/main', [], true)
+ 5 APPPATH\Controllers\Pages.php(12): view('Views/login/main')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-03 01:17:36 --> ErrorException: Undefined variable $username
+in APPPATH\Views\login\main.php on line 9.
+ 1 APPPATH\Views\login\main.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $username', 'C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php', 9)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Views/login/main', [], true)
+ 5 APPPATH\Controllers\Pages.php(12): view('Views/login/main')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-03 01:18:59 --> ErrorException: mysqli::__construct(): (HY000/1049): Unknown database 'main'
+in APPPATH\Views\login\main.php on line 9.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::__construct(): (HY000/1049): Unknown database \'main\'', 'C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php', 9)
+ 2 APPPATH\Views\login\main.php(9): mysqli->__construct('localhost', 'root', '', 'main')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Views/login/main', [], true)
+ 6 APPPATH\Controllers\Pages.php(12): view('Views/login/main')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-03 01:20:38 --> ErrorException: Undefined variable $sql
+in APPPATH\Views\login\main.php on line 20.
+ 1 APPPATH\Views\login\main.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sql', 'C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php', 20)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Views/login/main', [], true)
+ 5 APPPATH\Controllers\Pages.php(12): view('Views/login/main')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-03 01:20:40 --> ErrorException: Undefined variable $sql
+in APPPATH\Views\login\main.php on line 20.
+ 1 APPPATH\Views\login\main.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sql', 'C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php', 20)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Views/login/main', [], true)
+ 5 APPPATH\Controllers\Pages.php(12): view('Views/login/main')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-03 01:20:41 --> ErrorException: Undefined variable $sql
+in APPPATH\Views\login\main.php on line 20.
+ 1 APPPATH\Views\login\main.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sql', 'C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php', 20)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Views/login/main', [], true)
+ 5 APPPATH\Controllers\Pages.php(12): view('Views/login/main')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-03 01:23:28 --> ErrorException: Undefined variable $sql
+in APPPATH\Views\login\main.php on line 22.
+ 1 APPPATH\Views\login\main.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sql', 'C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\houkden\\app\\Views\\login\\main.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Views/login/main', [], true)
+ 5 APPPATH\Controllers\Pages.php(12): view('Views/login/main')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Pages->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
