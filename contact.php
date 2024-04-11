@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +51,7 @@
 
     <div class="col-md-12 mb-3">
       <label for="validationCustom02">Message</label>
-      <input type="text" class="form-control" id="validationCustom02" placeholder="Last Name" required>
+      <input type="text" class="form-control" id="validationCustom02" placeholder="Enter Message" required>
       <div class="invalid-feedback">
         Required Message.
       </div>
