@@ -1,35 +1,39 @@
 <?php
 session_start();
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit; 
-}
 
 include("./database/db_conn.php");
 
-$username = $_SESSION['username'];
-
-// Fetch user details from the database
-$sql = "SELECT fname, lname, age, usertype, username FROM register WHERE username = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $username);
-$stmt->execute();
-$result = $stmt->get_result();
-$user = $result->fetch_assoc();
-
-// Check if user exists
-if (!$user) {
-    // Redirect to login page if user not found
+// Check if the user is logged in
+if (!isset($_SESSION['username'])) {
+    // If not logged in, redirect to the login page
     header("Location: login.php");
-    exit;
+    exit();
 }
 
-// Extract user details
-$fname = $user['fname'];
-$lname = $user['lname'];
-$age = $user['age'];
-$username = $user['username'];
-$usertype =$user['usertype'];
+// Retrieve the user's information from the database
+$username = $_SESSION['username'];
+$sql = "SELECT * FROM register WHERE username='$username'";
+$result = mysqli_query($conn, $sql);
+
+if (!$result || mysqli_num_rows($result) != 1) {
+    // If user not found or multiple users found (should not happen), display an error
+    echo "Error: User not found or multiple users found.";
+    exit();
+}
+
+$user = mysqli_fetch_assoc($result);
+
+// Close the database connection
+mysqli_close($conn);
+
+// Logout functionality
+if (isset($_POST['logout'])) {
+    // Destroy the session
+    session_destroy();
+    // Redirect to the login page
+    header("Location: login.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -38,14 +42,26 @@ $usertype =$user['usertype'];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="style.css"> <!-- Include your CSS file -->
+    <link rel="stylesheet" href="css/home.css"> 
+
 </head>
 <body>
-    <h1>Welcome, <?php echo $fname . ' ' . $lname; ?></h1>
-    <p>Username: <?php echo $username; ?></p>
-    <p>Age: <?php echo $age; ?></p>
-    <p>Usertype: <?php echo $usertype; ?></p>
-    <a href="index.php"> Go Back to Website </a> </br>
-    <a href="logout.php">Logout</a> 
+    <?php include('header-admin.php'); ?> 
+
+    <section class="Profile">
+        <div class="container">
+            <h2>Profile</h2>
+            <div>
+                <p><strong>First Name:</strong> <?php echo $user['fname']; ?></p>
+                <p><strong>Last Name:</strong> <?php echo $user['lname']; ?></p>
+                <p><strong>Username:</strong> <?php echo $user['username']; ?></p>
+            </div>
+            <form method="post">
+                <button type="submit" name="logout">Logout</button>
+            </form>
+        </div>
+    </section>
+    <?php include('footer.php'); ?> 
+
 </body>
 </html>

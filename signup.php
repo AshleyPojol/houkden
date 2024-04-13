@@ -1,3 +1,56 @@
+<?php
+session_start();
+include ("./database/db_conn.php");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Retrieve form data
+  $fname = $_POST['fname'];
+  $lname = $_POST['lname'];
+  $age = $_POST['age'];
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  // Perform validation
+  $errors = array();
+
+  if (empty($fname)) {
+      $errors['fname'] = "First Name is required.";
+  }
+
+  if (empty($lname)) {
+      $errors['lname'] = "Last Name is required.";
+  }
+
+  if (empty($age)) {
+      $errors['age'] = "Age is required.";
+  }
+
+  if (empty($username)) {
+      $errors['username'] = "Username is required.";
+  }
+
+  if (empty($password)) {
+      $errors['password'] = "Password is required.";
+  }
+
+  // If no errors, registration is successful
+  if (empty($errors)) {
+      // SQL query to insert user data into the database
+      $sql = "INSERT INTO register (fname, lname, age, username, password) VALUES ('$fname', '$lname', '$age', '$username', '$password')";
+
+      // Execute the query
+      if (mysqli_query($conn, $sql)) {
+          echo "<script>alert('Registration Successful!'); window.location='login.php';</script>";
+          exit();
+      } else {
+          echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+      }
+  }
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +66,7 @@
   <div class="container">
 <h2>Create Account</h2>
 <p> Brew Leaf Milk Tea</p>
-<form class= "needs-validation" action=""  method="post" novalidate >
+<form class= "needs-validation" action=""  method="POST" validate >
   <div class="form-row">
     <div class="form-group col-md-6">
 		<label>First Name </label>

@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +33,7 @@ session_start();
       </li>
       <?php if(isset($_SESSION['usertype']) && ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user")): ?>
         <li class="nav-item">
-          <a class="nav-link" href="dashboard.php"><?php echo $_SESSION['username']; ?></a>
+          <a class="nav-link" href="profile.php"><?php echo $_SESSION['username']; ?></a>
         </li>
       <?php else: ?>
         <li class="nav-item">

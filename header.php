@@ -33,12 +33,19 @@
       <li class="nav-item">
         <a class="nav-link" href="contact.php">Contact</a>
       </li>
-      <li class="nav-item">
+      <?php if(isset($_SESSION['usertype']) && ($_SESSION['usertype'] == "admin" || $_SESSION['usertype'] == "user")): ?>
+        <li class="nav-item">
+          <a class="nav-link" href="profile.php"><?php echo $_SESSION['username']; ?></a>
+        </li>
+      <?php else: ?>
+        <li class="nav-item">
         <a class="nav-link" href="login.php">Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="signup.php">Sign Up</a>
       </li>
+      <?php endif; ?>
+    
     </ul>
   </div>
 </nav>
