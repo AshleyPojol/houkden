@@ -1,6 +1,6 @@
 <?php
 session_start();
-?>
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +27,7 @@ session_start();
       <th scope="col">Password</th>
       <th scope="col">Usertype</th>
       <th scope="col">Age</th>
+      
       <th scope="col">Function</th>
     </tr>
   </thead>

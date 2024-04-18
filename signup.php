@@ -113,6 +113,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </div>
 
+  
+
     <div class="form-class">
     <div class="custom-control custom-checkbox mb-12">
     <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>

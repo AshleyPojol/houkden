@@ -95,7 +95,7 @@ if (!empty($errors)) {
 		</div>
 
 		<div class="create">
-		<p>Don't have an account? <a href="register.php">Create an Account</a></p>
+		<p>Don't have an account? <a href="signup.php">Create an Account</a></p>
 		</div>
 
      </form>

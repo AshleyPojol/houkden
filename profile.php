@@ -42,11 +42,18 @@ if (isset($_POST['logout'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link rel="stylesheet" href="css/home.css"> 
+    <link rel="stylesheet" href="css/profile.css"> 
 
 </head>
 <body>
-    <?php include('header-admin.php'); ?> 
+    <?php 
+    // Conditionally include header based on usertype
+    if ($user['usertype'] == 'admin') {
+        include('header-admin.php');
+    } else {
+        include('header.php');
+    }
+    ?> 
 
     <section class="Profile">
         <div class="container">
@@ -55,6 +62,8 @@ if (isset($_POST['logout'])) {
                 <p><strong>First Name:</strong> <?php echo $user['fname']; ?></p>
                 <p><strong>Last Name:</strong> <?php echo $user['lname']; ?></p>
                 <p><strong>Username:</strong> <?php echo $user['username']; ?></p>
+                <p><strong>Usertype:</strong> <?php echo $user['usertype']; ?></p>
+
             </div>
             <form method="post">
                 <button type="submit" name="logout">Logout</button>
